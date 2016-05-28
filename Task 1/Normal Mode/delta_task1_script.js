@@ -19,7 +19,7 @@ function displayTime(){
     var remSeconds = Math.floor(remMillis/1000)-(remDays*24*60*60)-(remHours*60*60)-(remMinutes*60);
     
     //Set the value of the respective elements.
-    document.getElementById("days").value = remDays-30; //remDays-30 is given to account for the error of 31 days given by getTime function
+    document.getElementById("days").value = remDays-30; //remDays-30 is given to account for the error of 30 days given by getTime function
     document.getElementById("hrs").value = remHours;
     document.getElementById("mins").value = remMinutes;
     document.getElementById("sec").value = remSeconds;
