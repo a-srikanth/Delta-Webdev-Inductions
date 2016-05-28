@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    background-image: url(background.jpg);
+    font-weight: bold;
+    font-family: Rockwell,Helvetica,Tahoma,sans-serif, Tahoma,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    font-size: 25px;
+}
+body>header{
+    color: #3E2723;
+    text-shadow: white;
+    padding: 20px;
+    font-family: Rockwell,Helvetica,Tahoma,sans-serif, Tahoma,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    font-style: italic;
+    font-size: 25px;
+}
+body input{
+    background-color: #3E2723;
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: 65px;
+}
+body>span{
+    background-color: cornsilk;
+    color: #3E2723;
+    font-size: 30px
+}

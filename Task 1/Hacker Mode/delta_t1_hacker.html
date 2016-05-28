@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Timer</title>
+        <link rel="stylesheet" href="delta_t1_hacker_design.css"
+    </head>
+    <body>
+        <header>
+            <h1>COUNTDOWN TIMER</h1>
+        </header>
+        <br/><br/><br/>
+        <section id="timer">
+            <p id="timer title">Time left until Event:</p>
+            Days:<input id="days" type="number" value="0" style="width:100px" readonly="readonly"/>
+            Hours:<input id="hrs" type="number" value="0" style="width:40px" readonly="readonly"/>
+            Minutes:<input id="mins" type="number" value="0" style="width:40px" readonly="readonly"/>
+            Seconds:<input id="sec" type="number" value="0" style="width:40px" readonly="readonly"/>
+        </section>
+        <br/>
+        <section id="input">
+            <p id="input title">Set Event date and time</p>
+            Set Date:<input id="dd" type="number" placeholder="dd" style="width:44px"/>/
+                    <input id="mm" type="number" placeholder="mm" style="width:44px"/>/
+                    <input id="yy" type="number" placeholder="yyyy" style="width:52px"/>
+            &nbsp Set Time: <input id="h" type="number" placeholder="hrs" style="width:44px"/>:
+                            <input id="m" type="number" placeholder="mins" style="width:44px"/>:
+                            <input id="s" type="number" placeholder="sec" style="width:44px"/>
+        </section>
+        <br/>
+        <input id="b_start" type="button" onclick="startTimer()" value="Start"/>&nbsp
+        <input id="b_reset" type="button" onclick="resetTimer()" value="Reset" disabled=disabled/>&nbsp
+        <input id="b_pause" type="button" onclick="pauseTimer()" value="Pause" disabled=disabled/>&nbsp
+        <input id="b_resume" type="button" onclick="resumeTimer()" value="Resume" disabled="disabled"/>
+          
+        <script type="text/javascript" src="delta_t1_hacker_script.js"></script> 
+    </body>
+</html>
