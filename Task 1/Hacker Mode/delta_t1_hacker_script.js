@@ -22,7 +22,7 @@ function startTimer(){
     if(inputDay==0 || inputMonth==0 || inputYear==0){
         window.alert("Please enter a specific date");
     }else{
-        eventDate = new Date(inputYear,inputMonth,inputDay,inputHours,inputMinutes,inputSeconds,00);
+        eventDate = new Date(inputYear,inputMonth-1,inputDay,inputHours,inputMinutes,inputSeconds,00);
         eventMillis = eventDate.getTime();
         
         document.getElementById("timer").style.display="block";
@@ -64,6 +64,7 @@ function displayTime(){
     //event from the current time.
     var remMillis = eventMillis - currentMillis;
     
+    var test = 01;
     //Convert the milliseconds into days, hours, minutes and seconds
     var remDays = Math.floor(remMillis/(1000*60*60*24));
     var remHours = Math.floor(remMillis/(1000*60*60))-(remDays*24);
@@ -71,14 +72,13 @@ function displayTime(){
     var remSeconds = Math.floor(remMillis/1000)-(remDays*24*60*60)-(remHours*60*60)-(remMinutes*60);
     
     //Set the value of the respective elements.
-    document.getElementById("days").value = remDays-30; //remDays-30 is given to account for the error of 30 days given by getTime function
+    document.getElementById("days").value = remDays;
     document.getElementById("hrs").value = remHours;
     document.getElementById("mins").value = remMinutes;
     document.getElementById("sec").value = remSeconds;
     
     //Give an alert when timer reaches zero
-    //Here remDays==30 is used due to error given by the getTime function.
-    if(remDays==30 && remHours==0 && remMinutes==0 && remSeconds==0){
+    if(remDays==0 && remHours==0 && remMinutes==0 && remSeconds==0){
         window.alert("The time has come!!!!");
         return null;
     }
